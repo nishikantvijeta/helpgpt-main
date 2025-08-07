@@ -1,0 +1,28 @@
+{
+  "name": "sigmagpt-backend",
+  "version": "1.0.0",
+  "description": "Backend server for SigmaGPT using Express and MongoDB",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.4",
+    "openai": "^5.5.1",
+    "start": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [],
+  "author": "vijeta",
+  "license": "ISC"
+}
