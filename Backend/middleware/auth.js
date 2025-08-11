@@ -5,7 +5,11 @@ export default function (req, res, next) {
   console.log("Headers received:", req.headers);
   
   const authHeader = req.headers.authorization;
-  if (!authHeader) return res.status(401).json({ error: "No token" });
+ // if (!authHeader) return res.status(401).json({ error: "No token" });
+  if (!authHeader || !authHeader.startsWith("Bearer ")) {
+  return res.status(401).json({ error: "No token provided" });
+}
+
   const token = authHeader.split(" ")[1];
   try {
     const decoded = jwt.verify(token, JWT_SECRET);
